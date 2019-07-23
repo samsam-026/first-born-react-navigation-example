@@ -7,6 +7,7 @@ import Settings from "../modules/settings/container/Settings";
 import DrawerComponent from "./DrawerComponent";
 import { TabBar, TabItem, Icon, Text } from "@99xt/first-born";
 import Search from "../modules/search/container/Search";
+import colors from "../shared/style/colors";
 
 
 const HomeStack = createStackNavigator({
@@ -48,7 +49,7 @@ const Tabs = createBottomTabNavigator({
         tabBarPosition: "bottom",
         tabBarComponent: props => {
             return (
-                <TabBar color="#f8f8f8" activeColor="#0a60ff" inactiveColor="#8e8e93">
+                <TabBar color={colors.navBack} activeColor={colors.activeNav} inactiveColor={colors.inactiveNav}>
                     <TabItem onPress={() => props.navigation.navigate("HomeStack")} active={props.navigation.state.index === 0 ? true : false}>
                         <Icon name="home" />
                         <Text>Home</Text>

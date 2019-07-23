@@ -58,10 +58,10 @@ export default class NavigationHeader extends Component {
     render() {
         const { title } = this.props
         return (
-            <NavBar statusBarColor="#f8f8f8" statusBarContent="dark-content">
+            <NavBar statusBarColor={colors.navBack} statusBarContent="dark-content">
                 {this._renderLeft()}
                 <NavBarBody>
-                    <Text style={{ color: "black" }}>{title}</Text>
+                    <Text style={{ color: colors.black }}>{title}</Text>
                 </NavBarBody>
                 {this._renderRight()}
             </NavBar>
